@@ -1,0 +1,46 @@
+Summary - 
+
+1.LLMs = Transformer + Compute power
+2. Agents = LLM + Reasoning & Feedback
+3. Agentic AI = Agents with a defined task and role working as a tool.
+4. Crew AI is used to make custom agents with flexible roles & goals. It has Agent, Task, Crew, Process & LLM
+
+5. From Experiment 1 - Content Creation workflow
+
+Importing Agent, Task and Crew from crewai. 
+
+a) Defining 3 different agents planner, writer & editor. Each agent has a role, goal & backstory.
+
+b) Defining 3 tasks of plan, write and edit. Each task has description, expected_output and agent defined.
+
+c) execution invloves injecting agents & tasks to initialize a crew instance followed by kickoff with the input topic.
+
+6. From Experiment 2 - Customer Support Workflow
+
+a) now defining 2 agents, support_agent and support_quality_assurance_agent each having role, goal, backstory.
+
+b) Support tasks define inquiiry_resolution and quality_assurance_review each with description, expected_output, agent defined. Tool can also if defined if required. In this case, Website scraper is required for inquiry_resolution task.
+
+c) Execution is defining inputs as of customer from which company, person name and inquiry. In crew instance agents, tasks are passed.
+
+7. Market Analyst Agentic AI
+
+a) Researcher agent defined with role as market researcher, gola to fins and analyze latest tends in AI Industry, backstory of an expert market researcher.
+A search tool is defined which is required to search as SerperDevTool & gemini llm for analysis on the result and research work.
+
+b) Writer agent as role of content writer, goal to write a blog and llm to write creative blog post.
+
+c) Research & Write task with description of task, expected_outputs & defined agent.
+
+d) When the agentic AI is kickedoff, the thought process of the agent is clearl visible for finding the latest trends in AI industry and refining queries. The immediate output are the researched and scrapped links and respective metadata.
+The immediate thought of the agent is to review the collected links to articles and reports using Serper.
+The jsons for each link data is collected.
+Now Market Researcher agents jots down all the articles and report titles with sub headings.
+
+e) As the task for Market analyst agent is completed, this is followed by Constent Writer agent with task to write the blog postfor research findings.
+The thought process of the agent is to create a blog post based on research articles & reports by breaking down the task to create a strucutred and engaging blog. As the agents proeceed towards the goal, it also verifies facts and figures using Serper for google search.
+
+f) On final completition of task, the blog created is on 'The AI Revolution: Navigating the Latest Trends. 
+It contains a introductory paragrah followed by 5 sub points and paragraphs on Gen AI, Multimodla AI, AI Agents, Explainanble AI, ending with The Future of AI as the last topic.
+
+This blog is finally stored as a markdown.
